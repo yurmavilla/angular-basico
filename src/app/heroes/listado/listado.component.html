@@ -1,0 +1,40 @@
+<p>listado </p>
+
+<ul>
+    <li> {{ heroes[0] }} </li>   <!--  hacer referencia con doble {{}} es una forma de hacerlo --> 
+    <li> {{ heroes[1] }} </li>
+    <li> {{ heroes[2] }} </li>
+    <li> {{ heroes[3] }} </li>
+</ul> 
+
+
+<p> listado de Héroes </p>
+
+<div *ngIf=" heroeBorrado; else noBorrado ">
+    <h3>Héroe borrado: <small>{{ heroeBorrado }}</small> </h3>
+</div>
+
+<ng-template #noBorrado> <!--  va a mostrar el contenido basado en la condición de arriba, son referencias locales será identificado por el signo-->
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+
+<!-- Para el caso cuando no tenga nada usar ! para negar de esa condicion es un forma de hacerlo
+<div *ngIf="!heroeBorrado ">
+    <h3>No ha borrado nada </h3>
+</div>-->
+
+<button (click)="borrarHeroe()"> Borrar </button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">  <!--  La forma que se debe hacer con *ngFor: es muy parecido a un ciclo for, solo que en el mismo template html  --> 
+     {{ i +1}} - {{ heroe }} <!-- Como es de tipo string se colocan los {{}}--> 
+    </li>  
+</ul> 
+
+
+
+
+
+
+
