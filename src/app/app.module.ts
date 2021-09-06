@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { ContadorComponent } from './contador/contador/contador.component';
-import { ContadorModule } from './contador/contador/contador.module';
+import { ContadorModule } from './contador/contador.module';
 
 
 
